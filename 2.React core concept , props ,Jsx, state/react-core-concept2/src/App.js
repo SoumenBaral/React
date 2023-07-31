@@ -22,6 +22,7 @@ function App() {
     .then(res=>res.json())
     .then(data=>setUsers(data));
   },[])
+  console.log(users);
   return (
     <div className="App">
       {/* {
@@ -31,18 +32,21 @@ function App() {
       <button onClick={IncreaseCount}>Increase  </button>
       <button onClick={DecreaseCount}>Decrease  </button> */}
       {
-       users.map(user=><User name={user.name}></User>)
+       users.map(user=><User name={user.name} email={user.email} key={user.id}></User>)
       
       }
-
+     
 
     </div>
   );
 }
-function User ({name}){
+
+function User ({name, email}){
     return(
       <div>
         <h1>Name: {name}</h1>
+        <p>Email : {email}</p>
+
       </div>
     )
 }
