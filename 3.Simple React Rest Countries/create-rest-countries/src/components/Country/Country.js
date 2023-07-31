@@ -1,10 +1,13 @@
 import React from 'react';
-
-const Country = ({name,population}) => {
+import './Country.css'
+const Country = ({name,population,img}) => {
+    console.log(img);
     return (
-        <div>
+        <div className='country'>
+            <img src={img} alt="" />
             <h3>Name: {name} </h3>
             <h5>population: {population}</h5>
+            
         </div>
     );
 };

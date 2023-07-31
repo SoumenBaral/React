@@ -13,7 +13,7 @@ const Countries = () => {
       <h1>Visiting Every Country in the World</h1>
       <p>All Countries : {Countries.length}</p>
       {
-        Countries.map(country=><Country name={country.name.common} key={country.cca3} population ={country.population}></Country>)
+        Countries.map(country=><Country img={country.flags.png} name={country.name.common} key={country.cca3} population ={country.population}></Country>)
       }
     </div>
   )
