@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 const Products = [
     {name:'lenovo',price:55000},
     {name:'Hp ',price:125000},
@@ -16,18 +16,35 @@ function App() {
   const [count, setCount]=useState(0);
   const IncreaseCount =()=>setCount(count+1);
   const DecreaseCount =()=>setCount(count-1);
+  const [users, setUsers] = useState([]);
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res=>res.json())
+    .then(data=>setUsers(data));
+  },[])
   return (
     <div className="App">
       {/* {
         Products.map(product=><Product name={product.name} price={product.price}></Product>)
       } */}
-      <h1>Count :  {count} </h1>
+      {/* <h1>Count :  {count} </h1>
       <button onClick={IncreaseCount}>Increase  </button>
-      <button onClick={DecreaseCount}>Decrease  </button>
+      <button onClick={DecreaseCount}>Decrease  </button> */}
+      {
+       users.map(user=><User name={user.name}></User>)
+      
+      }
 
 
     </div>
   );
+}
+function User ({name}){
+    return(
+      <div>
+        <h1>Name: {name}</h1>
+      </div>
+    )
 }
 // function Product ({name, price}){
 //   return(
