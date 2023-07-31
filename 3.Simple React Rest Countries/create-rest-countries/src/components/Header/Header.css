@@ -1,0 +1,13 @@
+.Menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+.Menu li{
+    /* text-decoration: none; */
+    padding-left: 10px;
+    color: blue;
+    cursor: pointer;
+    
+}
