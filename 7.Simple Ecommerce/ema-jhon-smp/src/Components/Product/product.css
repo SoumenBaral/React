@@ -39,3 +39,6 @@ border-radius: 8px;
 .AddToCart:hover{
     background-color: orange;
 }
+.shopping-cart{
+    margin-left: 5px;
+}
