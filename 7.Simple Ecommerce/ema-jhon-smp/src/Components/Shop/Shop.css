@@ -2,3 +2,7 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
+.products-Container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
