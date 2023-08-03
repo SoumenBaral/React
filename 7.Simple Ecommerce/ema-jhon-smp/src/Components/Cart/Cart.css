@@ -1,6 +1,9 @@
 .carts{
     background-color: rgba(255, 153, 0, 0.3);
     padding: 15px;
+    position: sticky;
+    top: 0;
+    
 }
 .carts p{
     font-size: 16px;
@@ -15,6 +18,6 @@
 }
 .gand{
     columns: rgba(14, 22, 26, 1);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 400;
 }
