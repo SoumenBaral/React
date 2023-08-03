@@ -6,7 +6,7 @@ const Product = ({product}) => {
     return (
         <div className='product-container'>
             <img src={img } alt="" />
-            <h1>I am from product {name}</h1>
+           <h6>{name}</h6>
         </div>
     );
 };
