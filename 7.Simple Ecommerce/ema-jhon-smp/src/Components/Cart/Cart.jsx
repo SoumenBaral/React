@@ -1,11 +1,9 @@
 import React from 'react';
 import './Cart.css'
 const Cart = ({carts}) => {
-    console.log(carts);
     let price =0;
     let TotalShipping = 0;
     for(let cart of carts){
-        console.log(cart);
         price+=parseInt(cart.price);
         TotalShipping +=cart.shipping;
     }
