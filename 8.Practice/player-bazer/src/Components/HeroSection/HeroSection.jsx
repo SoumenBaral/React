@@ -24,9 +24,10 @@ const HeroSection = () => {
 
     return (
         <div>
-            <section className="slider">
+            <section className="slider ">
                 <img
-                    className='w-full'
+                    className='w-full h-[500px]'
+                    
                     id="image_slider"
                     src={images[imgIndex]}
                     alt={`Slide ${imgIndex}`}
